@@ -1,6 +1,8 @@
+//constantes 
 const mario = document.querySelector('.mario');
 const pipe = document.querySelector('.pipe');
 
+//script para pular
 const jump = () =>{
     mario.classList.add('jump');
 
@@ -9,6 +11,7 @@ const jump = () =>{
     }, 500)
 }
 
+//gameplay
 const loop = setInterval(()=>{
     const pipePosition = pipe.offsetLeft;
     const marioPosition = +window.getComputedStyle(mario).bottom.replace('px', '');
@@ -28,4 +31,5 @@ const loop = setInterval(()=>{
     }
 }, 10)
 
-document.addEventListener('keydown', jump);
+//qualquer tecla vai fazer o mario pular
+document.addEventListener('keydown', jump);  //adiciona evento de tecla pressionada
